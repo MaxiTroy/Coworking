@@ -22,8 +22,11 @@ const settings = ["Perfil", "Cuenta", "Cerrar sesión"];
 const Navbar = () => {
   const useStyles = makeStyles({
     navBar: {
-      background: "#2d2b28",
-      opacity: "0.9",
+      background: '#000000',  /* fallback for old browsers */
+background: '-webkit-linear-gradient(to right, #000000, #434343)',  /* Chrome 10-25, Safari 5.1-6 */
+background: 'linear-gradient(to right, #000000, #434343)', /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+opacity:0.9,
+
     },
     logo: {
       width: "100px",
@@ -53,7 +56,7 @@ const Navbar = () => {
 
   return (
     <>
-      <AppBar position="fixed" className={style.navBar}>
+      <AppBar position="static" className={style.navBar}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>

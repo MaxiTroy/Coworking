@@ -11,6 +11,7 @@ const useStyles = makeStyles({
   outlineButton: {
     color: "orange",
     borderColor: "orange",
+    
   },
   bodyCard: {
       display:'flex',
@@ -24,6 +25,9 @@ const useStyles = makeStyles({
     bottom: "35%",
     marginLeft: "30%",
   },
+  bodyText:{
+    marginBottom:'16px'
+  }
 });
 
 const Banner = () => {
@@ -42,6 +46,7 @@ const Banner = () => {
           component="div" 
           gutterBottom
           sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
+          className={style.bodyText}
           >
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
             blanditiis tenetur unde suscipit, quam beatae rerum inventore
