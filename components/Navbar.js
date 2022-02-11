@@ -15,18 +15,20 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import { makeStyles } from "@mui/styles";
+import Link from "next/link";
 
-const pages = ["Servicios", "Reservas", "Planes", "Contacto", "Ingresar"];
+const pages = ["Servicios", "Reservas", "Planes", "Contacto", "Login"];
 const settings = ["Perfil", "Cuenta", "Cerrar sesión"];
 
 const Navbar = () => {
   const useStyles = makeStyles({
     navBar: {
-      background: '#000000',  /* fallback for old browsers */
-background: '-webkit-linear-gradient(to right, #000000, #434343)',  /* Chrome 10-25, Safari 5.1-6 */
-background: 'linear-gradient(to right, #000000, #434343)', /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-opacity:0.9,
-
+      background: "#000000" /* fallback for old browsers */,
+      background:
+        "-webkit-linear-gradient(to right, #000000, #434343)" /* Chrome 10-25, Safari 5.1-6 */,
+      background:
+        "linear-gradient(to right, #000000, #434343)" /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */,
+      opacity: 0.9,
     },
     logo: {
       width: "100px",
@@ -34,7 +36,6 @@ opacity:0.9,
       marginRight: "120px",
     },
   });
-
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -56,7 +57,17 @@ opacity:0.9,
 
   return (
     <>
-      <AppBar position="static" className={style.navBar}>
+      <AppBar
+        position="static"
+        style={{
+          background: "#000000" /* fallback for old browsers */,
+          background:
+            "-webkit-linear-gradient(to right, #000000, #434343)" /* Chrome 10-25, Safari 5.1-6 */,
+          background:
+            "linear-gradient(to right, #000000, #434343)" /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */,
+          opacity: 0.9,
+        }}
+      >
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -97,7 +108,11 @@ opacity:0.9,
             </Box>
             <Box>
               <img
-                className={style.logo}
+                style={{
+                  width: "100px",
+                  height: "auto",
+                  marginRight: "120px",
+                }}
                 noWrap
                 component="div"
                 sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
