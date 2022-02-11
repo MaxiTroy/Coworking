@@ -4,6 +4,7 @@ import Banner from "../components/Banner";
 import Cards from "../components/cards";
 import { Routes, Route } from "react-dom";
 
+
 const PrincipalPage = () => {
   return (
     <>
