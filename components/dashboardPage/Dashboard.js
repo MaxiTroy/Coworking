@@ -19,8 +19,8 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import { mainListItems, secondaryListItems } from "./listItems";
 import MailIcon from "@mui/icons-material/Mail";
-import Calendar from './Calendar'
-
+import Calendar from "./Calendar";
+import Time from "./Time";
 
 function Copyright(props) {
   return (
@@ -141,7 +141,9 @@ function DashboardContent() {
               </Badge>
             </IconButton>
 
-            <IconButton style={{ color: "white", background: "#a7a9ac", marginLeft:8 }}>
+            <IconButton
+              style={{ color: "white", background: "#a7a9ac", marginLeft: 8 }}
+            >
               <Badge badgeContent={4} color="error">
                 <NotificationsIcon />
               </Badge>
@@ -190,14 +192,14 @@ function DashboardContent() {
                     p: 2,
                     display: "flex",
                     flexDirection: "column",
-                    height: 240,
+                    height: 310,
                   }}
                 >
-                  <Calendar/>
+                  <Calendar />
                 </Paper>
               </Grid>
               {/* Recent Deposits */}
-              <Grid item xs={12} md={4} lg={3}>
+              <Grid item xs={12} md={4} lg={6}>
                 <Paper
                   sx={{
                     p: 2,
@@ -206,8 +208,7 @@ function DashboardContent() {
                     height: 240,
                   }}
                 >
-<Calendar/>
-
+                  <Time/>
                 </Paper>
               </Grid>
               {/* Recent Orders */}

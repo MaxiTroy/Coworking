@@ -28,7 +28,7 @@ export const mainListItems = (
       <ListItemIcon>
         <PeopleIcon />
       </ListItemIcon>
-      <ListItemText primary="Login/Logout" />
+      <ListItemText primary="Registro" />
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>

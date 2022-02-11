@@ -6,7 +6,7 @@ import LocalizationProvider from "@mui/lab/LocalizationProvider";
 const Home2 = () => {
   return (
     <>
-      <LocalizationProvider dateAdapter={AdapterDateFns}>
+      <LocalizationProvider dateAdapter={AdapterDateFns} >
         <Dashboard />
       </LocalizationProvider>
     </>
