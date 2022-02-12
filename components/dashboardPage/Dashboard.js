@@ -20,7 +20,7 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import { mainListItems, secondaryListItems } from "./listItems";
 import MailIcon from "@mui/icons-material/Mail";
 import Calendar from "./Calendar";
-import Time from "./Time";
+import Time from "./TimeList";
 
 function Copyright(props) {
   return (
@@ -31,7 +31,7 @@ function Copyright(props) {
       {...props}
     >
       {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
+      <Link color="inherit" href="#">
         Your Website
       </Link>{" "}
       {new Date().getFullYear()}
@@ -187,13 +187,7 @@ function DashboardContent() {
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={3}>
               {/* Chart */}
-              <Grid
-                item
-                xs={12}
-                md={5}
-                lg={4}
-                sx={{ display: "flex", alignItems: "center" }}
-              >
+              <Grid item xs={12} md={5} lg={5}>
                 <Paper
                   sx={{
                     p: 2,
@@ -201,17 +195,18 @@ function DashboardContent() {
                     flexDirection: "column",
                   }}
                 >
+                  <Typography
+                    variant="h5"
+                    color="text.secondary"
+                    align="center"
+                  >
+                    Calendario
+                  </Typography>
                   <Calendar />
                 </Paper>
               </Grid>
               {/* Recent Deposits */}
-              <Grid
-                item
-                xs={12}
-                md={7}
-                lg={8}
-                sx={{ display: "flex", alignItems: "start" }}
-              >
+              <Grid item xs={12} md={7} lg={7}>
                 <Paper
                   sx={{
                     p: 2,
@@ -223,6 +218,11 @@ function DashboardContent() {
                 </Paper>
               </Grid>
               {/* Recent Orders */}
+              <Grid item xs={12}>
+                <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
+                  <Copyright sx={{ pt: 4 }} />
+                </Paper>
+              </Grid>
             </Grid>
           </Container>
         </Box>

@@ -131,7 +131,7 @@ export default function ColorButtons() {
         <Box sx={{ display: "flex", justifyContent: "center" }}>
           <Button
             variant="contained"
-            style={{ color: "white", background: "#424242" }}
+            sx={{ color: "white", background: "#424242", margin:3 }}
           >
             Reservar
           </Button>
