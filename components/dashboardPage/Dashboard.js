@@ -1,5 +1,5 @@
 import * as React from "react";
-import { styled, createTheme, ThemeProvider } from "@mui/material/styles";
+import { styled, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import MuiDrawer from "@mui/material/Drawer";
 import Box from "@mui/material/Box";
@@ -147,7 +147,7 @@ const Dashboard = ({ children }) => {
 
           {/*----------Notification Icon---------*/}
           <IconButton
-            style={{ color: "white", background: "#ee7623", marginLeft: 8 , marginRight:25}}
+            style={{ color: "white", background: "#ee7623", marginLeft: 8}}
           >
             <Badge badgeContent={4} color="error">
               <NotificationsIcon />
@@ -156,8 +156,8 @@ const Dashboard = ({ children }) => {
 
           {/*----------Profile Menú---------*/}
           
-            <Tooltip title="Open settings" sx={{marginRigth:8}}>
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+            <Tooltip title="Open settings" >
+              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0, ml:1 }}>
                 <Avatar
                   alt="Remy Sharp"
                   src="https://img2.freepng.es/20180623/abo/kisspng-computer-icons-person-clip-art-gray-icons-5b2ecf70855b56.8828146915297944165462.jpg"

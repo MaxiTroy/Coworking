@@ -8,40 +8,42 @@ import PeopleIcon from "@mui/icons-material/People";
 import BarChartIcon from "@mui/icons-material/BarChart";
 import LayersIcon from "@mui/icons-material/Layers";
 
+const MainListItem = ({}) => {
 
-const MainListItem = ({ }) => {
-
+  //Guardar la page en la store async
+  const [page, setPage] = React.useState('Reservas');
+  console.log("esta pagina es: " + page);
   return (
     <>
-      <ListItemButton>
+      <ListItemButton onClick={()=>{setPage("Reservas")}}>
         <ListItemIcon>
           <DashboardIcon />
         </ListItemIcon>
         <ListItemText primary="Reservas" />
       </ListItemButton>
-      
-      <ListItemButton>
+
+      <ListItemButton  onClick={()=>{setPage("Pedidos")}}>
         <ListItemIcon>
           <ShoppingCartIcon />
         </ListItemIcon>
         <ListItemText primary="Pedidos" />
       </ListItemButton>
 
-      <ListItemButton>
+      <ListItemButton onClick={()=>{setPage("Registro")}}>
         <ListItemIcon>
           <PeopleIcon />
         </ListItemIcon>
         <ListItemText primary="Registro" />
       </ListItemButton>
 
-      <ListItemButton>
+      <ListItemButton onClick={()=>{setPage("Reportes")}}>
         <ListItemIcon>
           <BarChartIcon />
         </ListItemIcon>
         <ListItemText primary="Reportes" />
       </ListItemButton>
 
-      <ListItemButton>
+      <ListItemButton onClick={()=>{setPage("Integrations")}}>
         <ListItemIcon>
           <LayersIcon />
         </ListItemIcon>
