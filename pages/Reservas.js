@@ -2,15 +2,18 @@ import Dashboard from "../components/dashboardPage/Dashboard";
 import React from "react";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
+import Reserva from "../components/Reserva";
 
-const Home2 = () => {
+const Reservas = () => {
   return (
     <>
-      <LocalizationProvider dateAdapter={AdapterDateFns} >
-        <Dashboard />
+      <LocalizationProvider dateAdapter={AdapterDateFns}>
+        <Dashboard>
+          <Reserva />
+        </Dashboard>
       </LocalizationProvider>
     </>
   );
 };
 
-export default Home2;
+export default Reservas;

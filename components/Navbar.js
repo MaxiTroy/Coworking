@@ -101,23 +101,29 @@ const Navbar = () => {
               >
                 {pages.map((page) => (
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page}</Typography>
+                    <Link href={`/${page}`}>
+                      <a textAlign="center">{page}</a>
+                    </Link>
                   </MenuItem>
                 ))}
               </Menu>
             </Box>
             <Box>
-              <img
-                style={{
-                  width: "100px",
-                  height: "auto",
-                  marginRight: "120px",
-                }}
-                noWrap
-                component="div"
-                sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
-                src="https://www.coworkingsalta.com/img/logo2020.svg"
-              />
+              <Link href="/">
+                <Button>
+                  <img
+                    style={{
+                      width: "100px",
+                      height: "auto",
+                      marginRight: "120px",
+                    }}
+                    noWrap
+                    component="div"
+                    sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
+                    src="https://www.coworkingsalta.com/img/logo2020.svg"
+                  />
+                </Button>
+              </Link>
             </Box>
 
             {/* <Typography
@@ -131,13 +137,15 @@ const Navbar = () => {
           </Typography>*/}
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages.map((page) => (
-                <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", display: "block" }}
-                >
-                  {page}
-                </Button>
+                <Link href={`/${page}`}>
+                  <Button
+                    key={page}
+                    onClick={handleCloseNavMenu}
+                    sx={{ my: 2, color: "white", display: "block" }}
+                  >
+                    {page}
+                  </Button>
+                </Link>
               ))}
             </Box>
             <Box
