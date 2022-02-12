@@ -70,7 +70,7 @@ export default function AddressForm() {
           <TextField
             id="state"
             name="state"
-            label="Estado/Provincia/Región"
+            label="Capital"
             fullWidth
             variant="standard"
           />
@@ -100,7 +100,7 @@ export default function AddressForm() {
         <Grid item xs={12}>
           <FormControlLabel
             control={
-              <Checkbox color="secondary" name="saveAddress" value="yes" />
+              <Checkbox color="primary" name="saveAddress" value="yes" />
             }
             label="Utilizar esta dirección para los detalles de pago"
 

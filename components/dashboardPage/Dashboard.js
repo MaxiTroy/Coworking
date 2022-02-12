@@ -15,10 +15,10 @@ import Avatar from "@mui/material/Avatar";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Typography from "@mui/material/Typography";
-
+import MainListItem from "./MainListItem";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import NotificationsIcon from "@mui/icons-material/Notifications";
-import { mainListItems, secondaryListItems } from "./listItems";
+import SecondaryListItems from './SecondaryListItem'
 import MailIcon from "@mui/icons-material/Mail";
 
 const drawerWidth = 240;
@@ -147,7 +147,7 @@ const Dashboard = ({ children }) => {
 
           {/*----------Notification Icon---------*/}
           <IconButton
-            style={{ color: "white", background: "#ee7623", marginLeft: 8 , marginRight:12}}
+            style={{ color: "white", background: "#ee7623", marginLeft: 8 , marginRight:25}}
           >
             <Badge badgeContent={4} color="error">
               <NotificationsIcon />
@@ -205,9 +205,13 @@ const Dashboard = ({ children }) => {
         </Toolbar>
         <Divider />
         <List component="nav">
-          {mainListItems}
+
+          <MainListItem />
+
           <Divider sx={{ my: 1 }} />
-          {secondaryListItems}
+
+          <SecondaryListItems/>
+
         </List>
       </Drawer>
       <Box
