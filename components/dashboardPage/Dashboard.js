@@ -101,7 +101,7 @@ function DashboardContent() {
         <AppBar
           position="absolute"
           style={{
-            background: "#d1d2d4" /* fallback for old browsers */,
+            background: "#212121" /* fallback for old browsers */,
           }}
           open={open}
         >
@@ -122,6 +122,7 @@ function DashboardContent() {
             >
               <MenuIcon />
             </IconButton>
+
             <Box sx={{ flexGrow: 1 }}>
               <img
                 style={{
@@ -135,14 +136,14 @@ function DashboardContent() {
                 src="https://www.coworkingsalta.com/img/logo2020.svg"
               />
             </Box>
-            <IconButton style={{ color: "white", background: "#a7a9ac" }}>
+            <IconButton style={{ color: "white", background: "#ee7623" }}>
               <Badge badgeContent={4} color="error">
                 <MailIcon />
               </Badge>
             </IconButton>
 
             <IconButton
-              style={{ color: "white", background: "#a7a9ac", marginLeft: 8 }}
+              style={{ color: "white", background: "#ee7623", marginLeft: 8 }}
             >
               <Badge badgeContent={4} color="error">
                 <NotificationsIcon />
@@ -186,39 +187,43 @@ function DashboardContent() {
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={3}>
               {/* Chart */}
-              <Grid item xs={12} md={8} lg={6}>
+              <Grid
+                item
+                xs={12}
+                md={5}
+                lg={4}
+                sx={{ display: "flex", alignItems: "center" }}
+              >
                 <Paper
                   sx={{
                     p: 2,
                     display: "flex",
                     flexDirection: "column",
-                    height: 310,
                   }}
                 >
                   <Calendar />
                 </Paper>
               </Grid>
               {/* Recent Deposits */}
-              <Grid item xs={12} md={4} lg={6}>
+              <Grid
+                item
+                xs={12}
+                md={7}
+                lg={8}
+                sx={{ display: "flex", alignItems: "start" }}
+              >
                 <Paper
                   sx={{
                     p: 2,
                     display: "flex",
                     flexDirection: "column",
-                    height: 240,
                   }}
                 >
-                  <Time/>
+                  <Time />
                 </Paper>
               </Grid>
               {/* Recent Orders */}
-              <Grid item xs={12}>
-                <Paper
-                  sx={{ p: 2, display: "flex", flexDirection: "column" }}
-                ></Paper>
-              </Grid>
             </Grid>
-            <Copyright sx={{ pt: 4 }} />
           </Container>
         </Box>
       </Box>
