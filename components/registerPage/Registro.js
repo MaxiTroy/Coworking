@@ -10,27 +10,9 @@ import Box from "@mui/material/Box";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Link from "next/link";
 
-function Copyright(props) {
-  return (
-    <Typography
-      variant="body2"
-      color="text.secondary"
-      align="center"
-      {...props}
-    >
-      {"Copyright © "}
-      <Link href="/">Your Website</Link> {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
-
-const theme = createTheme();
-
-export default function Registro() {
+const Registro = ()=> {
   return (
     <>
       <Container component="main" maxWidth="xs">
@@ -43,11 +25,11 @@ export default function Registro() {
             alignItems: "center",
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+          <Avatar sx={{ m: 1, bgcolor: "primary.main" }}>
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Sign up
+            Regístrate
           </Typography>
           <Box component="form" noValidate sx={{ mt: 3 }}>
             <Grid container spacing={2}>
@@ -58,7 +40,7 @@ export default function Registro() {
                   required
                   fullWidth
                   id="firstName"
-                  label="First Name"
+                  label="Nombre"
                   autoFocus
                 />
               </Grid>
@@ -67,7 +49,7 @@ export default function Registro() {
                   required
                   fullWidth
                   id="lastName"
-                  label="Last Name"
+                  label="Apellido"
                   name="lastName"
                   autoComplete="family-name"
                 />
@@ -77,7 +59,7 @@ export default function Registro() {
                   required
                   fullWidth
                   id="email"
-                  label="Email Address"
+                  label="Correo electrónico"
                   name="email"
                   autoComplete="email"
                 />
@@ -87,10 +69,21 @@ export default function Registro() {
                   required
                   fullWidth
                   name="password"
-                  label="Password"
+                  label="Contraseña"
                   type="password"
                   id="password"
                   autoComplete="new-password"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  name="re-password"
+                  label="Confirme contraseña"
+                  type="re-password"
+                  id="re-password"
+                  autoComplete="re-new-password"
                 />
               </Grid>
               <Grid item xs={12}>
@@ -98,7 +91,7 @@ export default function Registro() {
                   control={
                     <Checkbox value="allowExtraEmails" color="primary" />
                   }
-                  label="I want to receive inspiration, marketing promotions and updates via email."
+                  label='Me gustaría recibir notificaciones y promociones digitales por email'
                 />
               </Grid>
             </Grid>
@@ -108,17 +101,17 @@ export default function Registro() {
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              Sign Up
+              Registrarme
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="/">Already have an account? Sign in</Link>
+                <Link href="/">Ya tienes una cuenta? Ingresa aquí</Link>
               </Grid>
             </Grid>
           </Box>
         </Box>
-        <Copyright sx={{ mt: 5 }} />
       </Container>
     </>
   );
 }
+export default Registro;

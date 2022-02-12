@@ -10,12 +10,19 @@ import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import Badge from "@mui/material/Badge";
 import MenuIcon from "@mui/icons-material/Menu";
+import Tooltip from "@mui/material/Tooltip";
+import Avatar from "@mui/material/Avatar";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import Typography from "@mui/material/Typography";
+
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import { mainListItems, secondaryListItems } from "./listItems";
 import MailIcon from "@mui/icons-material/Mail";
 
 const drawerWidth = 240;
+const settings = ["Perfil", "Cuenta", "Cerrar sesión"];
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open",
@@ -69,6 +76,26 @@ const Dashboard = ({ children }) => {
     setOpen(!open);
   };
 
+  //------------Profile Menú--------------//
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
+
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+  //------------Profile Menú--------------//
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
@@ -96,7 +123,7 @@ const Dashboard = ({ children }) => {
           >
             <MenuIcon />
           </IconButton>
-
+          {/*----------LOGO---------*/}
           <Box sx={{ flexGrow: 1 }}>
             <img
               style={{
@@ -110,21 +137,59 @@ const Dashboard = ({ children }) => {
               src="https://www.coworkingsalta.com/img/logo2020.svg"
             />
           </Box>
-          <IconButton style={{ color: "white", background: "#ee7623" }}>
+
+          {/*----------Mail Icon---------*/}
+          <IconButton style={{ color: "white", background: "#ee7623"}}>
             <Badge badgeContent={4} color="error">
               <MailIcon />
             </Badge>
           </IconButton>
 
+          {/*----------Notification Icon---------*/}
           <IconButton
-            style={{ color: "white", background: "#ee7623", marginLeft: 8 }}
+            style={{ color: "white", background: "#ee7623", marginLeft: 8 , marginRight:12}}
           >
             <Badge badgeContent={4} color="error">
               <NotificationsIcon />
             </Badge>
           </IconButton>
+
+          {/*----------Profile Menú---------*/}
+          
+            <Tooltip title="Open settings" sx={{marginRigth:8}}>
+              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                <Avatar
+                  alt="Remy Sharp"
+                  src="https://img2.freepng.es/20180623/abo/kisspng-computer-icons-person-clip-art-gray-icons-5b2ecf70855b56.8828146915297944165462.jpg"
+                />
+              </IconButton>
+            </Tooltip>
+            <Menu
+              sx={{ mt: "45px" }}
+              id="menu-appbar"
+              anchorEl={anchorElUser}
+              anchorOrigin={{
+                vertical: "top",
+                horizontal: "right",
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "right",
+              }}
+              open={Boolean(anchorElUser)}
+              onClose={handleCloseUserMenu}
+            >
+              {settings.map((setting) => (
+                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">{setting}</Typography>
+                </MenuItem>
+              ))}
+            </Menu>
+          
         </Toolbar>
       </AppBar>
+
       <Drawer variant="permanent" open={open}>
         <Toolbar
           sx={{

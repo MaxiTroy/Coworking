@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Grid, Paper, Typography } from "@mui/material";
-import Calendar from "./dashboardPage/Calendar";
-import Time from "./dashboardPage/TimeList";
+import Calendar from "../dashboardPage/Calendar";
+import Time from "../dashboardPage/TimeList";
 
 const Reserva = () => {
   return (
