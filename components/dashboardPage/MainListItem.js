@@ -9,14 +9,9 @@ import BarChartIcon from "@mui/icons-material/BarChart";
 import LayersIcon from "@mui/icons-material/Layers";
 import mainStore from "../Zustand";
 
-const MainListItem = ({}) => {
+const MainListItem = () => {
   // Store
   const store = mainStore();
-  console.log(store, "esta es la store");
-
-  //Guardar la page en la store async
-  const [page, setPage] = React.useState("Reservas");
-  console.log("esta pagina es: " + page);
   return (
     <>
       <ListItemButton
