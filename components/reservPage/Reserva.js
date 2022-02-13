@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Grid, Paper, Typography } from "@mui/material";
 import Calendar from "../dashboardPage/Calendar";
-import Time from "../dashboardPage/TimeList";
+import TimeList from "./TimeList";
 
 const Reserva = () => {
   return (
@@ -31,7 +31,7 @@ const Reserva = () => {
               flexDirection: "column",
             }}
           >
-            <Time />
+            <TimeList />
           </Paper>
         </Grid>
       </Grid>

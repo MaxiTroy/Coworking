@@ -14,6 +14,7 @@ export default function AddressForm() {
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6}>
           <TextField
+            size="small"
             required
             id="firstName"
             name="firstName"
@@ -25,6 +26,7 @@ export default function AddressForm() {
         </Grid>
         <Grid item xs={12} sm={6}>
           <TextField
+            size="small"
             required
             id="lastName"
             name="lastName"
@@ -36,6 +38,7 @@ export default function AddressForm() {
         </Grid>
         <Grid item xs={12}>
           <TextField
+            size="small"
             required
             id="address1"
             name="address1"
@@ -47,6 +50,7 @@ export default function AddressForm() {
         </Grid>
         <Grid item xs={12}>
           <TextField
+            size="small"
             id="address2"
             name="address2"
             label="Dirección 2"
@@ -57,6 +61,7 @@ export default function AddressForm() {
         </Grid>
         <Grid item xs={12} sm={6}>
           <TextField
+            size="small"
             required
             id="city"
             name="city"
@@ -68,6 +73,7 @@ export default function AddressForm() {
         </Grid>
         <Grid item xs={12} sm={6}>
           <TextField
+            size="small"
             id="state"
             name="state"
             label="Capital"
@@ -77,6 +83,7 @@ export default function AddressForm() {
         </Grid>
         <Grid item xs={12} sm={6}>
           <TextField
+            size="small"
             required
             id="zip"
             name="zip"
@@ -88,6 +95,7 @@ export default function AddressForm() {
         </Grid>
         <Grid item xs={12} sm={6}>
           <TextField
+            size="small"
             required
             id="country"
             name="country"
@@ -103,7 +111,6 @@ export default function AddressForm() {
               <Checkbox color="primary" name="saveAddress" value="yes" />
             }
             label="Utilizar esta dirección para los detalles de pago"
-
           />
         </Grid>
       </Grid>

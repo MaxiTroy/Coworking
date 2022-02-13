@@ -19,7 +19,7 @@ export default function Login() {
         <CssBaseline />
         <Box
           sx={{
-            marginTop: 8,
+            marginTop: 1,
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
@@ -39,8 +39,7 @@ export default function Login() {
               id="email"
               label="Correo electrónico"
               name="email"
-              autoComplete="email"
-              autoFocus
+              autoComplete="email"              
             />
             <TextField
               margin="normal"

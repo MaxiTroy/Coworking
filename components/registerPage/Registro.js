@@ -12,14 +12,13 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Link from "next/link";
 
-const Registro = ()=> {
+const Registro = () => {
   return (
     <>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box
           sx={{
-            marginTop: 8,
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
@@ -31,8 +30,8 @@ const Registro = ()=> {
           <Typography component="h1" variant="h5">
             Regístrate
           </Typography>
-          <Box component="form" noValidate sx={{ mt: 3 }}>
-            <Grid container spacing={2}>
+          <Box component="form" noValidate sx={{ mt: 1 }}>
+            <Grid container spacing={1}>
               <Grid item xs={12} sm={6}>
                 <TextField
                   autoComplete="given-name"
@@ -41,7 +40,6 @@ const Registro = ()=> {
                   fullWidth
                   id="firstName"
                   label="Nombre"
-                  autoFocus
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -91,7 +89,7 @@ const Registro = ()=> {
                   control={
                     <Checkbox value="allowExtraEmails" color="primary" />
                   }
-                  label='Me gustaría recibir notificaciones y promociones digitales por email'
+                  label="Me gustaría recibir notificaciones y promociones digitales por email"
                 />
               </Grid>
             </Grid>
@@ -113,5 +111,5 @@ const Registro = ()=> {
       </Container>
     </>
   );
-}
+};
 export default Registro;
