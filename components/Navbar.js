@@ -137,9 +137,8 @@ const Navbar = () => {
           </Typography>*/}
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages.map((page) => (
-                <Link href={`/${page}`}>
+                <Link href={`/${page}`} key={page}>
                   <Button
-                    key={page}
                     onClick={handleCloseNavMenu}
                     sx={{ my: 2, color: "white", display: "block" }}
                   >
